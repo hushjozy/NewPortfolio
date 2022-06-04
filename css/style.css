@@ -556,6 +556,13 @@ font-size: 2.2rem;    }
       margin-bottom: 6%;
       margin-left: 2%;
     }
+    #portfolio .card_comp:hover {
+      width: 90vw;
+      height: 36vh;
+      z-index: 30;
+      box-shadow: rgb(18, 217, 124) 5px 0px 19px;
+      border-color: rgb(18, 217, 124);
+  }
     .card_img {
       width: 90%;
       left: 5%;
