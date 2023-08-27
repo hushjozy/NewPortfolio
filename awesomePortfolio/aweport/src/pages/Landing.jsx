@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./landing.css";
+import "./animate.css";
 // import { button } from "react-router-dom";
 import { ReactComponent as TwitterIcon } from "../assets/ri_twitter-fill.svg";
 import { ReactComponent as GithubIcon } from "../assets/ri_github-fill.svg";
@@ -110,7 +111,7 @@ const Landing = () => {
                   <p>Lagos, Nigeria</p>
                 </div>
               </div>
-              <button className="grad_btn">
+              <button className="grad_btn heartbeat">
                 <DownloadIcon /> Download Resume
               </button>
             </div>
@@ -153,7 +154,7 @@ const Landing = () => {
             </button>
           </nav>
           {active === 0 && (
-            <div className="right_pane vert_flex ">
+            <div className="right_pane vert_flex  swing-in-top-fwd">
               <h1>About Me</h1>
               <p>
                 A dedicated and efficient Full Stack Developer with 5+ years of
@@ -222,7 +223,7 @@ const Landing = () => {
             </div>
           )}
           {active === 1 && (
-            <div className="right_pane vert_flex ">
+            <div className="right_pane vert_flex swing-in-top-fwd">
               <h1>Resume</h1>
               <div className="spread_flex spread_half">
                 <h2>Education</h2>
@@ -292,7 +293,7 @@ const Landing = () => {
                   <h2>Work Skills</h2>
                   <div className="spread_flex wrap">
                     {skills?.map((skill) => {
-                      return <button> {skill}</button>;
+                      return <button className="bounce"> {skill}</button>;
                     })}
                   </div>
                 </div>
@@ -300,9 +301,59 @@ const Landing = () => {
                   <h2>Soft Skills</h2>
                   <div className="spread_flex wrap">
                     {softSkills?.map((skill) => {
-                      return <button> {skill}</button>;
+                      return <button className="bounce"> {skill}</button>;
                     })}
                   </div>
+                </div>
+              </div>
+            </div>
+          )}
+          {active === 2 && (
+            <div className="right_pane vert_flex swing-in-top-fwd">
+              <h1>Portfolio</h1>
+              <div className="spread_flex spread_half">
+                <div className="card yellow">
+                  <h3>Phone</h3>
+                  <p>
+                    <strong> +2349134248820</strong>
+                  </p>
+                </div>{" "}
+                <div className="vert_flex">
+                  <div className="card yellow">
+                    <h3>Email</h3>
+                    <a href="mailto:oshojoseph2@gmail.com">
+                      oshojoseph2@gmail.com
+                    </a>
+                  </div>{" "}
+                  <p>
+                    I am always open to discussing new projects, opportunities
+                    in tech world, partnerships and more so mentorship.{" "}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+          {active === 3 && (
+            <div className="right_pane vert_flex swing-in-top-fwd">
+              <h1>Contact</h1>
+              <div className="spread_flex spread_half">
+                <div className="card yellow">
+                  <h3>Phone</h3>
+                  <p>
+                    <strong> +2349134248820</strong>
+                  </p>
+                </div>{" "}
+                <div className="vert_flex">
+                  <div className="card yellow">
+                    <h3>Email</h3>
+                    <a href="mailto:oshojoseph2@gmail.com">
+                      oshojoseph2@gmail.com
+                    </a>
+                  </div>{" "}
+                  <p>
+                    I am always open to discussing new projects, opportunities
+                    in tech world, partnerships and more so mentorship.{" "}
+                  </p>
                 </div>
               </div>
             </div>
