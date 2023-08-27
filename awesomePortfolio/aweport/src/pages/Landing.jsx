@@ -12,10 +12,18 @@ import { ReactComponent as PinIcon } from "../assets/pin.svg";
 import { ReactComponent as MentorIcon } from "../assets/mentor.svg";
 import { ReactComponent as CodeIcon } from "../assets/code.svg";
 import { ReactComponent as MoonIcon } from "../assets/moon.svg";
+import { ReactComponent as Menu } from "../assets/menuOpen.svg";
+import { ReactComponent as Close } from "../assets/close.svg";
+import { ReactComponent as MiddleDecor } from "../assets/middledec.svg";
+import { ReactComponent as GitMob } from "../assets/git.svg";
+import { ReactComponent as AtMail } from "../assets/at.svg";
+import { ReactComponent as LinkedMob } from "../assets/linked.svg";
 
 const Landing = () => {
   const [active, setActive] = useState(0);
   const [mode, setMode] = useState("day");
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const skills = [
     "Amazon Web Services (AWS)",
     "Bootstrap",
@@ -62,302 +70,337 @@ const Landing = () => {
       <label>
         <strong>Joseph Osho</strong>
       </label>
-      <div className="landCont">
-        <div className="left_port">
-          <div className="leftpane vert_flex">
-            <img src={require("../assets/avatar.jpeg")} />
-            <h2> Joseph Osho</h2>
-            <h5>Full Stack Developer</h5>
-            <div className="spread_flex">
-              <button>
-                <TwitterIcon />
-              </button>
-              <button>
-                <GithubIcon />
-              </button>
-              <button>
-                <LinkedInIcon />
-              </button>
-              <button>
-                <EmailIcon />
-              </button>
-            </div>
-            <div className="containerPill card vert_flex">
+      {window.innerWidth > 900 ? (
+        <div className="landCont">
+          <div className="left_port">
+            <div className="leftpane vert_flex">
+              <img src={require("../assets/avatar.jpeg")} />
+              <h2> Joseph Osho</h2>
+              <h5>Full Stack Developer</h5>
               <div className="spread_flex">
-                {" "}
-                <PhoneIcon />
-                <div className="vert_flex">
-                  <h6>Phone</h6>
-                  <p>+2349134248820</p>
+                <button>
+                  <TwitterIcon />
+                </button>
+                <button>
+                  <GithubIcon />
+                </button>
+                <button>
+                  <LinkedInIcon />
+                </button>
+                <button>
+                  <EmailIcon />
+                </button>
+              </div>
+              <div className="containerPill card vert_flex">
+                <div className="spread_flex">
+                  {" "}
+                  <PhoneIcon />
+                  <div className="vert_flex">
+                    <h6>Phone</h6>
+                    <p>+2349134248820</p>
+                  </div>
+                </div>
+                <div className="spread_flex">
+                  {" "}
+                  <EmailIcon />
+                  <div className="vert_flex">
+                    <h6>Email</h6>
+                    <p>oshojoseph2@gmail.com</p>
+                  </div>
+                </div>{" "}
+                <div className="spread_flex">
+                  {" "}
+                  <PinIcon />
+                  <div className="vert_flex">
+                    <h6> Location</h6>
+                    <p>Lagos, Nigeria</p>
+                  </div>
+                </div>
+                <button className="grad_btn heartbeat">
+                  <DownloadIcon /> Download Resume
+                </button>
+              </div>
+              <div className="spread_flex"></div>
+              <div className="spread_flex"></div>
+              <div className="spread_flex"></div>
+            </div>
+          </div>
+          <div className="right_port">
+            {mode === "day" && (
+              <MoonIcon className="modeTog" onClick={() => setMode("night")} />
+            )}
+            {mode === "night" && (
+              <MoonIcon className="modeTog" onClick={() => setMode("day")} />
+            )}
+            <nav className="spread_flex">
+              <button
+                className={`${active === 0 && "active grad_btn"} vert_flex`}
+                onClick={() => setActive(0)}
+              >
+                Home
+              </button>{" "}
+              <button
+                className={`${active === 1 && "active grad_btn"} vert_flex`}
+                onClick={() => setActive(1)}
+              >
+                Resume
+              </button>{" "}
+              <button
+                className={`${active === 2 && "active grad_btn"} vert_flex`}
+                onClick={() => setActive(2)}
+              >
+                Work
+              </button>{" "}
+              <button
+                className={`${active === 3 && "active grad_btn"} vert_flex`}
+                onClick={() => setActive(3)}
+              >
+                Contact
+              </button>
+            </nav>
+            {active === 0 && (
+              <div className="right_pane vert_flex  swing-in-top-fwd">
+                <h1>About Me</h1>
+                <p>
+                  A dedicated and efficient Full Stack Developer with 5+ years
+                  of experience in software application development (mobile and
+                  web). Certified in both Front-End and Back- End technologies
+                  and an astute learner seeking to further improve in
+                  technological skills and frameworks as future stack
+                  development comes into relevance. Proficient in AWS, Cloud
+                  Development, GIT Version Control, MongoDB, HTML, CSS,
+                  Tailwind,Typescript,Next js, React Native, Bootstrap,
+                  Postgresql, DynamoDB, Node JS, React JS, SQL, Serverless
+                  Applications, Software Design, and Web Development.
+                </p>
+                <h2>What i do</h2>
+                <div className="spread_flex">
+                  <div className="card yellow">
+                    <h3>
+                      <CodeIcon />
+                      Web Development
+                    </h3>
+                    <p>
+                      {" "}
+                      As a developer i pride myself in not only creating
+                      aesthetically pleasing web applications but with more
+                      focus on the functionality aspects of it, making not only
+                      beautiful and responsive but also smart web applications
+                    </p>
+                  </div>{" "}
+                  <div className="card purple">
+                    <h3>
+                      <PhoneIcon /> App Development
+                    </h3>
+                    <p>
+                      {" "}
+                      As a developer i pride myself in not only creating
+                      aesthetically pleasing web applications but with more
+                      focus on the functionality aspects of it, making not only
+                      beautiful and responsive but also smart web applications
+                    </p>
+                  </div>
+                </div>
+                <div className="spread_flex">
+                  <div className="card purple">
+                    {" "}
+                    <h3>Cloud Developer</h3>
+                    <p>
+                      {" "}
+                      As a developer i pride myself in not only creating
+                      aesthetically pleasing web applications but with more
+                      focus on the functionality aspects of it, making not only
+                      beautiful and responsive but also smart web applications
+                    </p>
+                  </div>
+                  <div className="card yellow">
+                    <h3>
+                      <MentorIcon /> Technical Mentorship
+                    </h3>
+                    <p>
+                      {" "}
+                      As a developer i pride myself in not only creating
+                      aesthetically pleasing web applications but with more
+                      focus on the functionality aspects of it, making not only
+                      beautiful and responsive but also smart web applications
+                    </p>
+                  </div>
+                </div>{" "}
+              </div>
+            )}
+            {active === 1 && (
+              <div className="right_pane vert_flex swing-in-top-fwd">
+                <h1>Resume</h1>
+                <div className="spread_flex spread_half">
+                  <h2>Education</h2>
+                  <h2>Experience</h2>
+                </div>
+                <div className="spread_flex spread_half">
+                  <div className="card yellow">
+                    <h5>2014-2019</h5>
+                    <p>
+                      <strong> Computer Engineering</strong>
+                    </p>
+                    <p>
+                      <strong> Moshood Abiola Polytechnic</strong>
+                    </p>
+                  </div>{" "}
+                  <div className="vert_flex">
+                    <div className="card yellow">
+                      <h5>2022-2023</h5>
+                      <p>
+                        <strong> Snr Frontend Developer</strong>
+                      </p>
+                      <p>
+                        <strong>Robosys Labs Workstation</strong>
+                      </p>
+                    </div>{" "}
+                    <div className="card yellow">
+                      <h5>2019-2021</h5>
+                      <p>
+                        <strong> Full Stack Developer</strong>
+                      </p>
+                      <p>
+                        <strong>Technokraft Solutions</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="spread_flex spread_half">
+                  <h2>Certifications</h2>
+                </div>{" "}
+                <div className="spread_flex spread_half">
+                  <div className="card yellow">
+                    <h5>2022-2022</h5>
+                    <p>
+                      <strong> Cloud Development Nanodegree</strong>
+                    </p>
+                    <p>
+                      <strong> Udacity/ALX</strong>
+                    </p>
+                  </div>{" "}
+                  <div className="vert_flex">
+                    <div className="card yellow">
+                      <h5>2021-2021</h5>
+                      <p>
+                        <strong> Frontend Development with React</strong>
+                      </p>
+                      <p>
+                        <strong>
+                          University of Science and Technology Hong-Kong
+                          (Coursera)
+                        </strong>
+                      </p>
+                    </div>{" "}
+                  </div>
+                </div>
+                <div className="spread_flex spread_half ">
+                  <div className="vert_flex work_spread">
+                    <h2>Work Skills</h2>
+                    <div className="spread_flex wrap">
+                      {skills?.map((skill) => {
+                        return <button className="bounce"> {skill}</button>;
+                      })}
+                    </div>
+                  </div>
+                  <div className="vert_flex soft_spread">
+                    <h2>Soft Skills</h2>
+                    <div className="spread_flex wrap">
+                      {softSkills?.map((skill) => {
+                        return <button className="bounce"> {skill}</button>;
+                      })}
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="spread_flex">
-                {" "}
-                <EmailIcon />
-                <div className="vert_flex">
-                  <h6>Email</h6>
-                  <p>oshojoseph2@gmail.com</p>
-                </div>
-              </div>{" "}
-              <div className="spread_flex">
-                {" "}
-                <PinIcon />
-                <div className="vert_flex">
-                  <h6> Location</h6>
-                  <p>Lagos, Nigeria</p>
+            )}
+            {active === 2 && (
+              <div className="right_pane vert_flex swing-in-top-fwd">
+                <h1>Portfolio</h1>
+                <div className="spread_flex spread_half wrap ">
+                  <div className="card yellow portf">
+                    <img src={require("../assets/intro.png")} />
+                    <h5>Web Application</h5>
+                    <p>Hairmarket.ng</p>
+                  </div>{" "}
+                  <div className="card yellow">
+                    <img src={require("../assets/intro.png")} />
+                    <h5>Web Application</h5>
+                    <p>Hairmarket.ng</p>
+                  </div>{" "}
+                  <div className="card yellow">
+                    <img src={require("../assets/intro.png")} />
+                    <h5>Web Application</h5>
+                    <p>Hairmarket.ng</p>
+                  </div>{" "}
+                  <div className="card yellow">
+                    <img src={require("../assets/intro.png")} />
+                    <h5>Web Application</h5>
+                    <p>Hairmarket.ng</p>
+                  </div>{" "}
                 </div>
               </div>
-              <button className="grad_btn heartbeat">
-                <DownloadIcon /> Download Resume
-              </button>
-            </div>
-            <div className="spread_flex"></div>
-            <div className="spread_flex"></div>
-            <div className="spread_flex"></div>
+            )}
+            {active === 3 && (
+              <div className="right_pane vert_flex swing-in-top-fwd">
+                <h1>Contact</h1>
+                <div className="spread_flex spread_half">
+                  <div className="card yellow">
+                    <h3>Phone</h3>
+                    <p>
+                      <strong> +2349134248820</strong>
+                    </p>
+                  </div>{" "}
+                  <div className="vert_flex">
+                    <div className="card yellow">
+                      <h3>Email</h3>
+                      <a href="mailto:oshojoseph2@gmail.com">
+                        oshojoseph2@gmail.com
+                      </a>
+                    </div>{" "}
+                    <p>
+                      I am always open to discussing new projects, opportunities
+                      in tech world, partnerships and more so mentorship.{" "}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
-        <div className="right_port">
-          {mode === "day" && (
-            <MoonIcon className="modeTog" onClick={() => setMode("night")} />
-          )}
-          {mode === "night" && (
-            <MoonIcon className="modeTog" onClick={() => setMode("day")} />
-          )}
-          <nav className="spread_flex">
-            <button
-              className={`${active === 0 && "active grad_btn"} vert_flex`}
-              onClick={() => setActive(0)}
-            >
-              Home
-            </button>{" "}
-            <button
-              className={`${active === 1 && "active grad_btn"} vert_flex`}
-              onClick={() => setActive(1)}
-            >
-              Resume
-            </button>{" "}
-            <button
-              className={`${active === 2 && "active grad_btn"} vert_flex`}
-              onClick={() => setActive(2)}
-            >
-              Work
-            </button>{" "}
-            <button
-              className={`${active === 3 && "active grad_btn"} vert_flex`}
-              onClick={() => setActive(3)}
-            >
-              Contact
-            </button>
-          </nav>
-          {active === 0 && (
-            <div className="right_pane vert_flex  swing-in-top-fwd">
-              <h1>About Me</h1>
-              <p>
-                A dedicated and efficient Full Stack Developer with 5+ years of
-                experience in software application development (mobile and web).
-                Certified in both Front-End and Back- End technologies and an
-                astute learner seeking to further improve in technological
-                skills and frameworks as future stack development comes into
-                relevance. Proficient in AWS, Cloud Development, GIT Version
-                Control, MongoDB, HTML, CSS, Tailwind,Typescript,Next js, React
-                Native, Bootstrap, Postgresql, DynamoDB, Node JS, React JS, SQL,
-                Serverless Applications, Software Design, and Web Development.
-              </p>
-              <h2>What i do</h2>
-              <div className="spread_flex">
-                <div className="card yellow">
-                  <h3>
-                    <CodeIcon />
-                    Web Development
-                  </h3>
-                  <p>
-                    {" "}
-                    As a developer i pride myself in not only creating
-                    aesthetically pleasing web applications but with more focus
-                    on the functionality aspects of it, making not only
-                    beautiful and responsive but also smart web applications
-                  </p>
-                </div>{" "}
-                <div className="card purple">
-                  <h3>
-                    <PhoneIcon /> App Development
-                  </h3>
-                  <p>
-                    {" "}
-                    As a developer i pride myself in not only creating
-                    aesthetically pleasing web applications but with more focus
-                    on the functionality aspects of it, making not only
-                    beautiful and responsive but also smart web applications
-                  </p>
-                </div>
-              </div>
-              <div className="spread_flex">
-                <div className="card purple">
-                  {" "}
-                  <h3>Cloud Developer</h3>
-                  <p>
-                    {" "}
-                    As a developer i pride myself in not only creating
-                    aesthetically pleasing web applications but with more focus
-                    on the functionality aspects of it, making not only
-                    beautiful and responsive but also smart web applications
-                  </p>
-                </div>
-                <div className="card yellow">
-                  <h3>
-                    <MentorIcon /> Technical Mentorship
-                  </h3>
-                  <p>
-                    {" "}
-                    As a developer i pride myself in not only creating
-                    aesthetically pleasing web applications but with more focus
-                    on the functionality aspects of it, making not only
-                    beautiful and responsive but also smart web applications
-                  </p>
-                </div>
-              </div>{" "}
+      ) : (
+        <div className="mobCont">
+          <div className="mobnav">
+            {!menuOpen && (
+              <Menu onClick={() => setMenuOpen(true)} className=" menutog" />
+            )}
+            {menuOpen && (
+              <Close onClick={() => setMenuOpen(false)} className=" menutog" />
+            )}
+          </div>
+          {menuOpen && (
+            <div className="menudrop">
+              <ul className="vert_flex">
+                <li>Home</li>
+                <li>Resume</li>
+                <li>Portfolio</li>
+                <li>Contact</li>
+              </ul>
             </div>
           )}
-          {active === 1 && (
-            <div className="right_pane vert_flex swing-in-top-fwd">
-              <h1>Resume</h1>
-              <div className="spread_flex spread_half">
-                <h2>Education</h2>
-                <h2>Experience</h2>
-              </div>
-              <div className="spread_flex spread_half">
-                <div className="card yellow">
-                  <h5>2014-2019</h5>
-                  <p>
-                    <strong> Computer Engineering</strong>
-                  </p>
-                  <p>
-                    <strong> Moshood Abiola Polytechnic</strong>
-                  </p>
-                </div>{" "}
-                <div className="vert_flex">
-                  <div className="card yellow">
-                    <h5>2022-2023</h5>
-                    <p>
-                      <strong> Snr Frontend Developer</strong>
-                    </p>
-                    <p>
-                      <strong>Robosys Labs Workstation</strong>
-                    </p>
-                  </div>{" "}
-                  <div className="card yellow">
-                    <h5>2019-2021</h5>
-                    <p>
-                      <strong> Full Stack Developer</strong>
-                    </p>
-                    <p>
-                      <strong>Technokraft Solutions</strong>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="spread_flex spread_half">
-                <h2>Certifications</h2>
-              </div>{" "}
-              <div className="spread_flex spread_half">
-                <div className="card yellow">
-                  <h5>2022-2022</h5>
-                  <p>
-                    <strong> Cloud Development Nanodegree</strong>
-                  </p>
-                  <p>
-                    <strong> Udacity/ALX</strong>
-                  </p>
-                </div>{" "}
-                <div className="vert_flex">
-                  <div className="card yellow">
-                    <h5>2021-2021</h5>
-                    <p>
-                      <strong> Frontend Development with React</strong>
-                    </p>
-                    <p>
-                      <strong>
-                        University of Science and Technology Hong-Kong
-                        (Coursera)
-                      </strong>
-                    </p>
-                  </div>{" "}
-                </div>
-              </div>
-              <div className="spread_flex spread_half ">
-                <div className="vert_flex work_spread">
-                  <h2>Work Skills</h2>
-                  <div className="spread_flex wrap">
-                    {skills?.map((skill) => {
-                      return <button className="bounce"> {skill}</button>;
-                    })}
-                  </div>
-                </div>
-                <div className="vert_flex soft_spread">
-                  <h2>Soft Skills</h2>
-                  <div className="spread_flex wrap">
-                    {softSkills?.map((skill) => {
-                      return <button className="bounce"> {skill}</button>;
-                    })}
-                  </div>
-                </div>
-              </div>
+          <div className="land_content">
+            <h5>My name is Joseph Osho</h5>
+            <h1>I’M A DEVELOPER</h1>
+            <MiddleDecor />
+            <div className="spread_flex">
+              <AtMail /> <GitMob /> <LinkedMob />
             </div>
-          )}
-          {active === 2 && (
-            <div className="right_pane vert_flex swing-in-top-fwd">
-              <h1>Portfolio</h1>
-              <div className="spread_flex spread_half wrap ">
-                <div className="card yellow portf">
-                  <img src={require("../assets/intro.png")} />
-                  <h5>Web Application</h5>
-                  <p>Hairmarket.ng</p>
-                </div>{" "}
-                <div className="card yellow">
-                  <img src={require("../assets/intro.png")} />
-                  <h5>Web Application</h5>
-                  <p>Hairmarket.ng</p>
-                </div>{" "}
-                <div className="card yellow">
-                  <img src={require("../assets/intro.png")} />
-                  <h5>Web Application</h5>
-                  <p>Hairmarket.ng</p>
-                </div>{" "}
-                <div className="card yellow">
-                  <img src={require("../assets/intro.png")} />
-                  <h5>Web Application</h5>
-                  <p>Hairmarket.ng</p>
-                </div>{" "}
-              </div>
-            </div>
-          )}
-          {active === 3 && (
-            <div className="right_pane vert_flex swing-in-top-fwd">
-              <h1>Contact</h1>
-              <div className="spread_flex spread_half">
-                <div className="card yellow">
-                  <h3>Phone</h3>
-                  <p>
-                    <strong> +2349134248820</strong>
-                  </p>
-                </div>{" "}
-                <div className="vert_flex">
-                  <div className="card yellow">
-                    <h3>Email</h3>
-                    <a href="mailto:oshojoseph2@gmail.com">
-                      oshojoseph2@gmail.com
-                    </a>
-                  </div>{" "}
-                  <p>
-                    I am always open to discussing new projects, opportunities
-                    in tech world, partnerships and more so mentorship.{" "}
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
+          </div>
+          <div className="skillsmob">
+            <button>Skills</button>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

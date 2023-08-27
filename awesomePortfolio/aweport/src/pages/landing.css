@@ -280,3 +280,100 @@ nav button.active {
 .spread_flex.spread_half .soft_spread.vert_flex h2 {
   width: 100%;
 }
+@media screen and (max-width: 500px) {
+  .mobnav {
+    width: 100vw;
+    height: 57px;
+    flex-shrink: 0;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-inline: 5%;
+    z-index: 1000;
+  }
+  label strong {
+    display: none;
+  }
+  .container {
+    background: url("../assets/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .menudrop {
+    position: fixed;
+    top: 57px;
+    width: 100vw;
+    height: 35vh;
+    left: 0vw;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menudrop .vert_flex {
+    justify-content: space-around;
+    height: 80%;
+    width: 100%;
+  }
+  .menudrop li {
+    color: #fff;
+    width: 100%;
+    padding-block: 12px;
+  }
+  .menudrop li:hover {
+    background: #fff;
+    color: #000;
+  }
+  .land_content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    gap: 22px;
+    color: #fff;
+  }
+  h5 {
+    color: #fff;
+  }
+  .skillsmob {
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(26, 21, 21, 0) 0%,
+        rgba(1, 1, 1, 0.16) 100%
+      ),
+      #fff;
+    height: 2258px;
+    width: 100vw;
+    margin-left: -6vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 22px;
+    padding-block: 22px;
+  }
+  .skillsmob button {
+    min-width: 161px;
+    height: 68px;
+    flex-shrink: 0;
+    border-radius: 0px;
+    border: 8px solid #000;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 127.9%; /* 17.906px */
+    letter-spacing: 6.095px;
+  }
+}
