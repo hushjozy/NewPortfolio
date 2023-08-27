@@ -21,17 +21,14 @@ const Landing = () => {
     "Bootstrap",
     "Cascading Style Sheets (CSS)",
     "Cloud Development",
-    "Communication",
-    "Computer Graphics",
-    "Data Integration",
-    "Data Processing",
+    "Redux",
+    "Redux Toolkit",
     "DynamoDB",
-    "Effective Communication",
+    "Typescript",
     "Firebase",
-    "Front End Web Development",
     "Git",
     "Heroku",
-    "Hypertext Markup Language (HTML)",
+    "HTML5",
     "JavaScript",
     "Mobile Application Development",
     "MongoDB",
@@ -41,13 +38,12 @@ const Landing = () => {
     "PostgreSQL",
     "React Native",
     "ReactJS",
-    "Representational State Transfer (REST)",
-    "Socket.IO",
+    "REST API Integration",
+    "Websockets",
     "Software Engineering",
     "SQL",
     "Tailwind CSS",
-    "Web Application",
-    "Web Development",
+    "Web Application Development",
   ];
   const softSkills = [
     "Communication",
@@ -311,25 +307,27 @@ const Landing = () => {
           {active === 2 && (
             <div className="right_pane vert_flex swing-in-top-fwd">
               <h1>Portfolio</h1>
-              <div className="spread_flex spread_half">
-                <div className="card yellow">
-                  <h3>Phone</h3>
-                  <p>
-                    <strong> +2349134248820</strong>
-                  </p>
+              <div className="spread_flex spread_half wrap ">
+                <div className="card yellow portf">
+                  <img src={require("../assets/intro.png")} />
+                  <h5>Web Application</h5>
+                  <p>Hairmarket.ng</p>
                 </div>{" "}
-                <div className="vert_flex">
-                  <div className="card yellow">
-                    <h3>Email</h3>
-                    <a href="mailto:oshojoseph2@gmail.com">
-                      oshojoseph2@gmail.com
-                    </a>
-                  </div>{" "}
-                  <p>
-                    I am always open to discussing new projects, opportunities
-                    in tech world, partnerships and more so mentorship.{" "}
-                  </p>
-                </div>
+                <div className="card yellow">
+                  <img src={require("../assets/intro.png")} />
+                  <h5>Web Application</h5>
+                  <p>Hairmarket.ng</p>
+                </div>{" "}
+                <div className="card yellow">
+                  <img src={require("../assets/intro.png")} />
+                  <h5>Web Application</h5>
+                  <p>Hairmarket.ng</p>
+                </div>{" "}
+                <div className="card yellow">
+                  <img src={require("../assets/intro.png")} />
+                  <h5>Web Application</h5>
+                  <p>Hairmarket.ng</p>
+                </div>{" "}
               </div>
             </div>
           )}
