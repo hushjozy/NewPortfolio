@@ -15,6 +15,51 @@ import { ReactComponent as MoonIcon } from "../assets/moon.svg";
 const Landing = () => {
   const [active, setActive] = useState(0);
   const [mode, setMode] = useState("day");
+  const skills = [
+    "Amazon Web Services (AWS)",
+    "Bootstrap",
+    "Cascading Style Sheets (CSS)",
+    "Cloud Development",
+    "Communication",
+    "Computer Graphics",
+    "Data Integration",
+    "Data Processing",
+    "DynamoDB",
+    "Effective Communication",
+    "Firebase",
+    "Front End Web Development",
+    "Git",
+    "Heroku",
+    "Hypertext Markup Language (HTML)",
+    "JavaScript",
+    "Mobile Application Development",
+    "MongoDB",
+    "Next.js",
+    "Node.js",
+    "NoSQL",
+    "PostgreSQL",
+    "React Native",
+    "ReactJS",
+    "Representational State Transfer (REST)",
+    "Socket.IO",
+    "Software Engineering",
+    "SQL",
+    "Tailwind CSS",
+    "Web Application",
+    "Web Development",
+  ];
+  const softSkills = [
+    "Communication",
+    "Teamwork",
+    "Adaptability",
+    "Problem Solving",
+    "Time Management",
+    "Critical Thinking",
+    "Leadership",
+    "Empathy",
+    "Conflict Resolution",
+    "Active Listening",
+  ];
   return (
     <div className={`container ${mode}`}>
       <label>
@@ -107,73 +152,161 @@ const Landing = () => {
               Contact
             </button>
           </nav>
-          <div className="right_pane vert_flex ">
-            <h1>About Me</h1>
-            <p>
-              A dedicated and efficient Full Stack Developer with 5+ years of
-              experience in software application development (mobile and web).
-              Certified in both Front-End and Back- End technologies and an
-              astute learner seeking to further improve in technological skills
-              and frameworks as future stack development comes into relevance.
-              Proficient in AWS, Cloud Development, GIT Version Control,
-              MongoDB, HTML, CSS, Tailwind,Typescript,Next js, React Native,
-              Bootstrap, Postgresql, DynamoDB, Node JS, React JS, SQL,
-              Serverless Applications, Software Design, and Web Development.
-            </p>
-            <h2>What i do</h2>
-            <div className="spread_flex">
-              <div className="card yellow">
-                <h3>
-                  <CodeIcon />
-                  Web Development
-                </h3>
-                <p>
+          {active === 0 && (
+            <div className="right_pane vert_flex ">
+              <h1>About Me</h1>
+              <p>
+                A dedicated and efficient Full Stack Developer with 5+ years of
+                experience in software application development (mobile and web).
+                Certified in both Front-End and Back- End technologies and an
+                astute learner seeking to further improve in technological
+                skills and frameworks as future stack development comes into
+                relevance. Proficient in AWS, Cloud Development, GIT Version
+                Control, MongoDB, HTML, CSS, Tailwind,Typescript,Next js, React
+                Native, Bootstrap, Postgresql, DynamoDB, Node JS, React JS, SQL,
+                Serverless Applications, Software Design, and Web Development.
+              </p>
+              <h2>What i do</h2>
+              <div className="spread_flex">
+                <div className="card yellow">
+                  <h3>
+                    <CodeIcon />
+                    Web Development
+                  </h3>
+                  <p>
+                    {" "}
+                    As a developer i pride myself in not only creating
+                    aesthetically pleasing web applications but with more focus
+                    on the functionality aspects of it, making not only
+                    beautiful and responsive but also smart web applications
+                  </p>
+                </div>{" "}
+                <div className="card purple">
+                  <h3>
+                    <PhoneIcon /> App Development
+                  </h3>
+                  <p>
+                    {" "}
+                    As a developer i pride myself in not only creating
+                    aesthetically pleasing web applications but with more focus
+                    on the functionality aspects of it, making not only
+                    beautiful and responsive but also smart web applications
+                  </p>
+                </div>
+              </div>
+              <div className="spread_flex">
+                <div className="card purple">
                   {" "}
-                  As a developer i pride myself in not only creating
-                  aesthetically pleasing web applications but with more focus on
-                  the functionality aspects of it, making not only beautiful and
-                  responsive but also smart web applications
-                </p>
+                  <h3>Cloud Developer</h3>
+                  <p>
+                    {" "}
+                    As a developer i pride myself in not only creating
+                    aesthetically pleasing web applications but with more focus
+                    on the functionality aspects of it, making not only
+                    beautiful and responsive but also smart web applications
+                  </p>
+                </div>
+                <div className="card yellow">
+                  <h3>
+                    <MentorIcon /> Technical Mentorship
+                  </h3>
+                  <p>
+                    {" "}
+                    As a developer i pride myself in not only creating
+                    aesthetically pleasing web applications but with more focus
+                    on the functionality aspects of it, making not only
+                    beautiful and responsive but also smart web applications
+                  </p>
+                </div>
               </div>{" "}
-              <div className="card purple">
-                <h3>
-                  <PhoneIcon /> App Development
-                </h3>
-                <p>
-                  {" "}
-                  As a developer i pride myself in not only creating
-                  aesthetically pleasing web applications but with more focus on
-                  the functionality aspects of it, making not only beautiful and
-                  responsive but also smart web applications
-                </p>
+            </div>
+          )}
+          {active === 1 && (
+            <div className="right_pane vert_flex ">
+              <h1>Resume</h1>
+              <div className="spread_flex spread_half">
+                <h2>Education</h2>
+                <h2>Experience</h2>
+              </div>
+              <div className="spread_flex spread_half">
+                <div className="card yellow">
+                  <h5>2014-2019</h5>
+                  <p>
+                    <strong> Computer Engineering</strong>
+                  </p>
+                  <p>
+                    <strong> Moshood Abiola Polytechnic</strong>
+                  </p>
+                </div>{" "}
+                <div className="vert_flex">
+                  <div className="card yellow">
+                    <h5>2022-2023</h5>
+                    <p>
+                      <strong> Snr Frontend Developer</strong>
+                    </p>
+                    <p>
+                      <strong>Robosys Labs Workstation</strong>
+                    </p>
+                  </div>{" "}
+                  <div className="card yellow">
+                    <h5>2019-2021</h5>
+                    <p>
+                      <strong> Full Stack Developer</strong>
+                    </p>
+                    <p>
+                      <strong>Technokraft Solutions</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="spread_flex spread_half">
+                <h2>Certifications</h2>
+              </div>{" "}
+              <div className="spread_flex spread_half">
+                <div className="card yellow">
+                  <h5>2022-2022</h5>
+                  <p>
+                    <strong> Cloud Development Nanodegree</strong>
+                  </p>
+                  <p>
+                    <strong> Udacity/ALX</strong>
+                  </p>
+                </div>{" "}
+                <div className="vert_flex">
+                  <div className="card yellow">
+                    <h5>2021-2021</h5>
+                    <p>
+                      <strong> Frontend Development with React</strong>
+                    </p>
+                    <p>
+                      <strong>
+                        University of Science and Technology Hong-Kong
+                        (Coursera)
+                      </strong>
+                    </p>
+                  </div>{" "}
+                </div>
+              </div>
+              <div className="spread_flex spread_half ">
+                <div className="vert_flex work_spread">
+                  <h2>Work Skills</h2>
+                  <div className="spread_flex wrap">
+                    {skills?.map((skill) => {
+                      return <button> {skill}</button>;
+                    })}
+                  </div>
+                </div>
+                <div className="vert_flex soft_spread">
+                  <h2>Soft Skills</h2>
+                  <div className="spread_flex wrap">
+                    {softSkills?.map((skill) => {
+                      return <button> {skill}</button>;
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="spread_flex">
-              <div className="card purple">
-                {" "}
-                <h3>Cloud Developer</h3>
-                <p>
-                  {" "}
-                  As a developer i pride myself in not only creating
-                  aesthetically pleasing web applications but with more focus on
-                  the functionality aspects of it, making not only beautiful and
-                  responsive but also smart web applications
-                </p>
-              </div>
-              <div className="card yellow">
-                <h3>
-                  <MentorIcon /> Technical Mentorship
-                </h3>
-                <p>
-                  {" "}
-                  As a developer i pride myself in not only creating
-                  aesthetically pleasing web applications but with more focus on
-                  the functionality aspects of it, making not only beautiful and
-                  responsive but also smart web applications
-                </p>
-              </div>
-            </div>{" "}
-          </div>
+          )}
         </div>
       </div>
     </div>

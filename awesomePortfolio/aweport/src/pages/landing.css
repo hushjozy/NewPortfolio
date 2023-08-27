@@ -211,3 +211,39 @@ nav button.active {
   margin-left: 2%; */
   margin-bottom: 20px;
 }
+.spread_flex.spread_half {
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+}
+.spread_flex.spread_half .vert_flex {
+  width: 100%;
+}
+
+.spread_half h2,
+.spread_half .card {
+  width: 48%;
+}
+.spread_flex.spread_half .vert_flex .card {
+  width: 100%;
+}
+.spread_flex.wrap {
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.spread_flex.spread_half .work_spread.vert_flex {
+  width: 70%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.spread_flex.spread_half .soft_spread.vert_flex {
+  width: 30%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.spread_flex.spread_half .work_spread.vert_flex h2,
+.spread_flex.spread_half .soft_spread.vert_flex h2 {
+  width: 100%;
+}
