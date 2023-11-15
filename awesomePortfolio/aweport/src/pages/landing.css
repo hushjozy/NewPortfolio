@@ -104,6 +104,15 @@ h6 {
   right: 0;
   top: -126px;
 }
+.sunny {
+  padding: 6px;
+  width: 60px;
+  height: 60px;
+  border: 1px solid goldenrod;
+  border-radius: 50%;
+  min-width: fit-content;
+  min-height: fit-content;
+}
 nav {
   position: absolute;
   right: 0;
@@ -257,6 +266,14 @@ nav button.active {
 .spread_half .card {
   width: 48%;
 }
+.spread_half .card {
+  max-height: 420px;
+  overflow: hidden;
+}
+.spread_half .card img {
+  height: 190px;
+  object-fit: contain;
+}
 .spread_flex.spread_half .vert_flex .card {
   width: 100%;
 }
@@ -279,6 +296,12 @@ nav button.active {
 .spread_flex.spread_half .work_spread.vert_flex h2,
 .spread_flex.spread_half .soft_spread.vert_flex h2 {
   width: 100%;
+}
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 900px) {
 }
 @media screen and (max-width: 500px) {
   .mobnav {
@@ -309,7 +332,7 @@ nav button.active {
     width: 100vw;
     height: 35vh;
     left: 0vw;
-    background: rgba(0, 0, 0, 0.88);
+    background: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -375,5 +398,36 @@ nav button.active {
     font-weight: 700;
     line-height: 127.9%; /* 17.906px */
     letter-spacing: 6.095px;
+  }
+  .skillsmob .serveBtn {
+    display: flex;
+    width: 144px;
+    height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.3px;
+    border-block: 0px;
+    border-inline: 3px solid #000;
+  }
+  .skillsmob h5 {
+    width: 80%;
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 3.151px;
+  }
+  .skillsmob p {
+    width: 85%;
+    text-align: justify;
   }
 }
