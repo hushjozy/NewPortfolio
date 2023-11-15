@@ -480,14 +480,14 @@ const Landing = () => {
             <h1>I’M A DEVELOPER</h1>
 
             <MiddleDecor />
-            <a
-              className=" heartbeat"
+            <button
+              className="blackker heartbeat"
               style={{ background: "#000", fontWeight: "400" }}
               onClick={() => handleDownloadClick()}
             >
               <DownloadIcon />
               Download Resume
-            </a>
+            </button>
             <div className="spread_flex">
               <AtMail /> <GitMob /> <LinkedMob />
             </div>
@@ -551,9 +551,9 @@ const Landing = () => {
               in cases where we need to create loosely coupled systems,
               simplifying deployment across various environments.
             </p>
-            <button>Skills</button>
+            {/* <button>Skills</button>
             <button>Portfolio</button>
-            <button>Contact</button>
+            <button>Contact</button> */}
           </div>
         </div>
       )}

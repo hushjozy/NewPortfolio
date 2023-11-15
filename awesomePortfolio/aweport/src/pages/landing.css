@@ -430,4 +430,11 @@ nav button.active {
     width: 85%;
     text-align: justify;
   }
+  .blackker {
+    background: rgb(0, 0, 0);
+    font-weight: 400;
+    min-width: fit-content;
+    display: flex;
+    padding: 10px;
+  }
 }
